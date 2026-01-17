@@ -256,14 +256,11 @@ export default function Portfolio() {
         <div className="flex items-center gap-8">
           {/* Profile Video */}
           <div className="w-48 h-48 rounded-full border-4 border-gray-600 shadow-lg overflow-hidden">
-            <video
-              src={`${basePath}/bio-video.mp4`}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover scale-125"
-            />
+          <img
+            src={`${basePath}/1769260947950.jpeg`}
+            alt="Profile"
+            className="w-full h-full object-cover scale-125"
+          />
           </div>
 
           {/* Description / Quote */}
