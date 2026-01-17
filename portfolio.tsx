@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Youtube, Linkedin, FileText, Github, Shield } from "lucide-react"
 
-const basePath = process.env.NODE_ENV === 'production' ? '/yonko.github.io' : ''
+const basePath = ''
 
 export default function Portfolio() {
   const [currentTime, setCurrentTime] = useState("")
