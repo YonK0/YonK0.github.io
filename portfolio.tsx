@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react"
 import { Youtube, Linkedin, FileText, Github, Shield } from "lucide-react"
 
+const basePath = process.env.NODE_ENV === 'production' ? '/yonko.github.io' : ''
+
 export default function Portfolio() {
   const [currentTime, setCurrentTime] = useState("")
 
@@ -95,18 +97,18 @@ export default function Portfolio() {
     youtube: "https://www.youtube.com/@its-yonko",
     github: "https://github.com/YonK0",
     tryhackme: "http://tryhackme.com/p/YonK0",
-    resume: "/resume.pdf",
+    resume: `${basePath}/resume.pdf`,
   }
 
   return (
     <div
       className="bg-black font-mono relative"
       onClick={handlePageClick}
-      style={{ cursor: "url(/skull-cursor.png) 16 16, auto" }}
+      style={{ cursor: `url(${basePath}/skull-cursor.png) 16 16, auto` }}
     >
       <style jsx>{`
   * {
-    cursor: url(/skull-cursor.png) 16 16, auto !important;
+    cursor: url(${basePath}/skull-cursor.png) 16 16, auto !important;
   }
   @keyframes float1 {
     0%, 100% { transform: translateY(0px) rotate(12deg); }
@@ -255,7 +257,7 @@ export default function Portfolio() {
           {/* Profile Video */}
           <div className="w-48 h-48 rounded-full border-4 border-gray-600 shadow-lg overflow-hidden">
             <video
-              src="/bio-video.mp4"
+              src={`${basePath}/bio-video.mp4`}
               autoPlay
               loop
               muted
